@@ -28,7 +28,7 @@ rabbitmq-server
 
  This is a distributed chat system that users RabitMQ to send messages to the nodes.
 
- - Each node is started by suppliying the user name for the node. When a node is started is sends a roll call anouncement to cause all the nodes to announce themselves. If a node is already using the user name the node will exit with an error message. 
+ - Each node is started by supplying the user name for the node. When a node is started is sends a roll call anouncement to cause all the nodes to announce themselves. If a node is already using the user name the node will exit with an error message. 
  - The first node to start will become the leader. If the leader leaves an election is called to pick a new leader. The node that has been active the longest is chosen as the new leader.
 
 ### Commands
@@ -43,7 +43,7 @@ Each node can execute commands with the format: \command_name. The following com
 
 ### Directives
 
-The chat leader can issue certain directives that effect the other users. Each directive starts with a ! character. The directives are:
+The chat leader can issue certain directives that effect the other users. Each directive  has the format: !directive. The directives are:
 
 - !silence <user_name> : This will cause the targed user_name to not be able to talk
 - !unsilence <user_name> : This allows the target user to talk again
